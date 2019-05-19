@@ -39,7 +39,7 @@ Edit the argument "COM10" to change the number to the COM port to which your sys
 
 ### Initialization:
 
-`arm = SevenBot(port, baud-rate)`
+`arm = SevenBot(port, baud_rate)`
 
 Creates an object representing a SevenBot connected on a specified COM port, and attempts to open serial communication. See installation instructions for selecting correct COM port. Baud rate should always be set to 115200 (standard for serial communication with most Arduino boards).
 
@@ -62,5 +62,10 @@ Sets the operational status of the robot's servo motors. Possible values for sta
 
 `arm.setSpeed(speed)`
 
-Sets the motor speed for each individual zervo of the robot, given as a Numpy array of 7 values from 0-250. Array indices 0-5 refer to the robot's joints, and index 6 controls the speed of the gripper servo (if using the optional gripper).
+Sets the motor speed for each individual servo of the robot, given as a Numpy array of 7 values from 0-250. Array indices 0-5 refer to the robot's joints, and index 6 controls the speed of the gripper servo (if using the optional gripper).
 
+### Position
+
+`arm.setAngle(angles)`
+
+Sets the position of each servo (from 0-180 degrees) of the robot, given as a Numpy array of 7 values from 0-180. Array indices 0-5 refer to the robot's joints, and index 6 controls the speed of the gripper servo (if using the optional gripper). If using the vacuum pump, set the value of index 6 to 0 to turn the vacuum on, and 180 to turn it off. The servos have an effective angular resolution of roughly 0.18 degrees.
