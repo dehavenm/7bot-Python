@@ -26,7 +26,7 @@ For running the GUI example code, clone the repo into any convenient location. T
 Connect the USB port in the 7Bot base to the host PC. Open the Arduino software, go to Tools->Port, and look at the list of avilable COM ports. The COM port where the 7Bot is connected will be listed as "Arduino Due (Programming Port)". 
 
 
-##Running the GUI code
+## Running the GUI code
 
 Once installed, open the GUI code (either ikgui.py or sevenbotgui.py) in a Python IDE and find the line:
 
