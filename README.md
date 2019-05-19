@@ -30,7 +30,7 @@ Connect the USB port in the 7Bot base to the host PC. Open the Arduino software,
 
 Once installed, open the GUI code (either ikgui.py or sevenbotgui.py) in a Python IDE and find the line:
 
-'''self.arm = SevenBot('COM10', 115200)'''
+'self.arm = SevenBot('COM10', 115200)'
 
 Edit the argument "COM10" to change the number to the COM port to which your system has assigned the 7Bot's Arduino board (see previous step). After that, you can run the Python file.
 
