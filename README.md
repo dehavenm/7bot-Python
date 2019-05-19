@@ -37,7 +37,7 @@ Edit the argument "COM10" to change the number to the COM port to which your sys
 
 ## Using the library
 
-# Initialization:
+### Initialization:
 
 'arm = SevenBot(port, baud-rate)'
 
