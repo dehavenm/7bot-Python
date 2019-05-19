@@ -39,9 +39,7 @@ Edit the argument "COM10" to change the number to the COM port to which your sys
 
 # Initialization:
 
-'''
-arm = SevenBot(port, baud-rate)
-'''
+'arm = SevenBot(port, baud-rate)'
 
 Creates an object representing a SevenBot connected on a specified COM port, and attempts to open serial communication. See installation instructions for selecting correct COM port. Baud rate should always be set to 115200 (standard for serial communication with most Arduino boards).
 
