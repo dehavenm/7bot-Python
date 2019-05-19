@@ -44,7 +44,7 @@ Edit the argument "COM10" to change the number to the COM port to which your sys
 Creates an object representing a SevenBot connected on a specified COM port, and attempts to open serial communication. See installation instructions for selecting correct COM port. Baud rate should always be set to 115200 (standard for serial communication with most Arduino boards).
 
 
-# Force Status
+### Force Status
 
 '''
 arm.setForceStatus(status)
@@ -59,7 +59,7 @@ Sets the operational status of the robot's servo motors. Possible values for sta
 2 - Protected: Allows for normal operation, but force status cannot be changed directly between "Protected" and "Forceless" (must change to "Normal" first)
 
 
-# Speed
+### Speed
 
 '''
 arm.setSpeed(speed)
