@@ -6,7 +6,7 @@ https://github.com/woshialex/py7bot
 
 The 7Bot is a desktop six-axis robot arm released on Kickstarter in 2015. It is driven by specialized digital servos connected to an Arduino Due in the base of the robot. It includes a small vacuum pump in its base for picking up objects, and offered an optional gripper with a seventh servo. The robot can be controlled from a PC by sending and receiving data through the USB link in the Arduino board.
 
-## Presequisites
+## Prerequisites
 
 Arduino software (Can be downloadwed at https://www.arduino.cc/en/Main/Software)
 
