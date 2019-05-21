@@ -6,7 +6,6 @@ https://github.com/woshialex/py7bot
 
 The 7Bot is a desktop six-axis robot arm released on Kickstarter in 2015. It is driven by specialized digital servos connected to an Arduino Due in the base of the robot. It includes a small vacuum pump in its base for picking up objects, and offered an optional gripper with a seventh servo. The robot can be controlled from a PC by sending and receiving data through the USB link in the Arduino board.
 
-
 ## Presequisites
 
 Arduino software (Can be downloadwed at https://www.arduino.cc/en/Main/Software)
@@ -77,7 +76,7 @@ Sets the position of each servo (from 0-180 degrees) of the robot, given as a Nu
 
 The included Arduino code includes a number of inverse kinematic functions for directly commanding the robot's position.
 
-#### (IK5)
+#### Function IK5
 
 `arm.setIK5(position, vec56, theta5, theta6)`
 
@@ -91,7 +90,7 @@ theta5: rotation of robot's wrist (0-180 degrees)
 
 theta6: position of gripper servo (8-180 degrees)
 
-#### (IK6)
+#### Function IK6
 
 `arm.setIK6(self, j6, vec56, vec67, theta6)`
 
@@ -106,3 +105,11 @@ vec56: array defining unit vector (expressed as integers spaled from -1023 to 10
 theta6: position of gripper servo (8-180 degrees)
 
 See the file "Communication Instruction (v1.0.1).pdf" for mode detailed information about the robot's communication protocol, coordinate system, and joints.
+
+
+### Additional Links
+
+[Pinecone AI](https://www.pinecone.ai/) - The startup which first created the 7Bot. They do not currently have it avilable for sale, but they claim they will release a new version of it in the near future.
+
+
+https://github.com/7Bot/7Bot-Arduino-lib
