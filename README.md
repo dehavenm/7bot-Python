@@ -69,3 +69,14 @@ Sets the motor speed for each individual servo of the robot, given as a Numpy ar
 `arm.setAngle(angles)`
 
 Sets the position of each servo (from 0-180 degrees) of the robot, given as a Numpy array of 7 values from 0-180. Array indices 0-5 refer to the robot's joints, and index 6 controls the speed of the gripper servo (if using the optional gripper). If using the vacuum pump, set the value of index 6 to 0 to turn the vacuum on, and 180 to turn it off. The servos have an effective angular resolution of roughly 0.18 degrees.
+
+
+### Inverse Kinematics (IK5)
+
+`arm.setIK5(position, vec56, theta5, theta6)`
+
+Sets the robot position using an inverse kinematic function built into the Arduino code. Function arguments are as follows:
+
+position: array of 3 integers defining the robot's wrist position in millimeters [x, y, z]
+
+vec56: 
