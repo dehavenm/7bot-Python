@@ -109,7 +109,7 @@ See the file "Communication Instruction (v1.0.1).pdf" for mode detailed informat
 
 ### Additional Links
 
-[Pinecone AI](https://www.pinecone.ai/) - The startup which first created the 7Bot. They do not currently have it avilable for sale, but they claim they will release a new version of it in the near future.
+[Pinecone AI](https://www.pinecone.ai/) - the startup which first created the 7Bot. They do not currently have it avilable for sale, but they claim they will release a new version of it in the near future.
 
 
-https://github.com/7Bot/7Bot-Arduino-lib
+[7Bot-Arduino-lib](https://github.com/7Bot/7Bot-Arduino-lib) - 7Bot Arduino files can be downloaded here.
