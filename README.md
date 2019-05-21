@@ -1,6 +1,8 @@
 # 7bot-Python
 
-A Python library for controlling the 7Bot robot arm from a host PC.
+A Python library for controlling the 7Bot robot arm from a host PC. It is a slightly refined version of the code found here:
+
+https://github.com/woshialex/py7bot
 
 The 7Bot is a desktop six-axis robot arm released on Kickstarter in 2015. It is driven by specialized digital servos connected to an Arduino Due in the base of the robot. It includes a small vacuum pump in its base for picking up objects, and offered an optional gripper with a seventh servo. The robot can be controlled from a PC by sending and receiving data through the USB link in the Arduino board.
 
@@ -71,12 +73,36 @@ Sets the motor speed for each individual servo of the robot, given as a Numpy ar
 Sets the position of each servo (from 0-180 degrees) of the robot, given as a Numpy array of 7 values from 0-180. Array indices 0-5 refer to the robot's joints, and index 6 controls the speed of the gripper servo (if using the optional gripper). If using the vacuum pump, set the value of index 6 to 0 to turn the vacuum on, and 180 to turn it off. The servos have an effective angular resolution of roughly 0.18 degrees.
 
 
-### Inverse Kinematics (IK5)
+### Inverse Kinematics 
+
+The included Arduino code includes a number of inverse kinematic functions for directly commanding the robot's position.
+
+#### (IK5)
 
 `arm.setIK5(position, vec56, theta5, theta6)`
 
-Sets the robot position using an inverse kinematic function built into the Arduino code. Function arguments are as follows:
+Function arguments are as follows:
 
 position: array of 3 integers defining the robot's wrist position in millimeters [x, y, z]
 
-vec56: 
+vec56: array defining unit vector (expressed as integers spaled from -1023 to 1023) describing the direction in which the robot's wrist is pointed [x, y, z]
+
+theta5: rotation of robot's wrist (0-180 degrees)
+
+theta6: position of gripper servo (8-180 degrees)
+
+#### (IK6)
+
+`arm.setIK6(self, j6, vec56, vec67, theta6)`
+
+Function arguments are as follows:
+
+position: array of 3 integers defining the robot's wrist position in millimeters [x, y, z]
+
+vec56: array defining unit vector (expressed as integers spaled from -1023 to 1023) describing the direction in which the robot's wrist is pointed [x, y, z]
+
+vec56: array defining unit vector (expressed as integers spaled from -1023 to 1023) describing the rotation of the robot's wrist [x, y, z]
+
+theta6: position of gripper servo (8-180 degrees)
+
+See the file "Communication Instruction (v1.0.1).pdf" for mode detailed information about the robot's communication protocol, coordinate system, and joints.
